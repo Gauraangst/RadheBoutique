@@ -1,0 +1,123 @@
+.page {
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + var(--space-2xl));
+  padding-bottom: var(--space-5xl);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  align-items: end;
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  margin-top: var(--space-sm);
+}
+
+.logoutButton,
+.orderLink {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: var(--space-xl);
+}
+
+.panel {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(139, 26, 43, 0.08);
+  border-radius: calc(var(--radius-lg) + 4px);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form,
+.orderList {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-sm);
+  color: var(--color-text-light);
+}
+
+.field input {
+  min-height: 52px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(139, 26, 43, 0.14);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.orderCard {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(139, 26, 43, 0.08);
+  background: var(--color-white);
+}
+
+.orderTop {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.orderMeta {
+  display: grid;
+  justify-items: end;
+}
+
+.orderNote {
+  color: var(--color-text-muted);
+}
+
+.error {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.success {
+  color: #2d6a4f;
+  font-weight: 600;
+}
+
+.emptyState,
+.loading,
+.emptyOrders {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .header,
+  .orderTop {
+    flex-direction: column;
+  }
+
+  .orderMeta {
+    justify-items: start;
+  }
+}

@@ -1,0 +1,109 @@
+.page {
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + var(--space-2xl));
+  padding-bottom: var(--space-5xl);
+  background:
+    radial-gradient(circle at top left, rgba(201, 169, 110, 0.16), transparent 32%),
+    linear-gradient(180deg, var(--color-ivory), var(--color-blush-light));
+}
+
+.card {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-xl);
+  padding: var(--space-2xl);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(139, 26, 43, 0.08);
+  border-radius: calc(var(--radius-xl) + 4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--space-md);
+}
+
+.description {
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+.switcher {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+  padding: 0.35rem;
+  border-radius: var(--radius-full);
+  background: rgba(139, 26, 43, 0.06);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.switchButton {
+  min-width: 140px;
+  min-height: 42px;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-full);
+  color: var(--color-text-light);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.switchButtonActive {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-sm);
+  color: var(--color-text-light);
+}
+
+.field input {
+  min-height: 52px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(139, 26, 43, 0.14);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.error {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+.helpBox {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: rgba(245, 230, 224, 0.8);
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: var(--space-lg);
+  }
+
+  .switcher {
+    width: 100%;
+  }
+
+  .switchButton {
+    min-width: 0;
+  }
+}
